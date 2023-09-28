@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.june</groupId>
+  <artifactId>SmartInfrastracture</artifactId>
+  <version>1.0.20230921</version>
+  <packaging>pom</packaging>
+
+  <name>SmartInfrastracture</name>
+  <url>http://maven.apache.org</url>
+  <modules>
+    <module>LocalCache</module>
+    <module>CommonUtil</module>
+  </modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring.version>5.3.30</spring.version>
+    <infra.version>1.0.20230921</infra.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>2.0.9</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>32.1.2-jre</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.june</groupId>
+        <artifactId>CommonUtil</artifactId>
+        <version>${infra.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.june</groupId>
+        <artifactId>LocalCache</artifactId>
+        <version>${infra.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
