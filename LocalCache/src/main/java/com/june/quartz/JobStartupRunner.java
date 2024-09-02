@@ -34,6 +34,7 @@ public class JobStartupRunner implements CommandLineRunner {
 
         Scheduler scheduler;
         try {
+
             scheduler = schedulerConfig.scheduler();
             TriggerKey triggerKey = TriggerKey.triggerKey("trigger1", TRIGGER_GROUP_NAME);
             CronTrigger trigger = (CronTrigger) scheduler.getTrigger(triggerKey);
