@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="mysql" targetRuntime="MyBatis3Simple">
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/odaa?useSSL=true"
+                        userId="root"
+                        password="l200808"/>
+
+
+        <javaModelGenerator targetPackage="example" targetProject="./SequenceGenerator/src/test/java"/>
+        <sqlMapGenerator targetPackage="example" targetProject="./SequenceGenerator/src/test/java"/>
+        <javaClientGenerator targetPackage="example"
+                             targetProject="./SequenceGenerator/src/test/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+        <javaServiceGenerator targetPackage="example" targetProject="./SequenceGenerator/src/test/java">
+        </javaServiceGenerator>
+
+        <table tableName="odaa_sequence" />
+    </context>
+</generatorConfiguration>
